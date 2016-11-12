@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Libray</title>
+		
+		<!-- bower:js-->
+		<script src="lib/angular/angular.js"></script>
+		<script src="lib/angular-route/angular-route.js"></script>
+		<script src="lib/jquery/dist/jquery.js"></script>
+		<script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+		<!-- endbower -->
+		
+		<!-- bower:css -->
+		<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+		<!-- endbower -->
+		
+		<!-- inject:css -->
+		<link rel="stylesheet" href="dist/styles/main.css">
+		<link rel="stylesheet" href="dist/styles/singin.css">
+		<!-- endinject -->
+		
+	</head>
+	<body ng-controller="MainController">
+		<div class="container">
+			<ul class="nav nav-tabs">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#signin">Sign in</a></li>
+				<li><a href="#entry">Entry</a></li>
+			</ul>
+			
+			<div ng-view></div>
+		
+		</div>
+		
+		
+		<!-- inject:js -->
+		<script src="dist/src/app.js"></script>
+		<script src="dist/src/route.config.js"></script>
+		<script src="dist/src/filters/prettyJson.filter.js"></script>
+		<script src="dist/src/app.controller.js"></script>
+		<script src="dist/src/entry/entry.controller.js"></script>
+		<script src="dist/src/filters/filters.js"></script>
+		<!-- endinject -->
+		
+	</body>
+</html>

@@ -1,0 +1,36 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": "eslint:all",
+    "parserOptions": {
+    },
+    "globals": {
+        "angular": true
+    },
+    "rules": {
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-console": ["error", { "allow": ["log", "warn", "error"] }],
+        "no-tabs": "off",
+        "no-trailing-spaces": "off",
+        "quote-props": [2, "as-needed"]
+    }
+}
