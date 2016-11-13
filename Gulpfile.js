@@ -66,6 +66,7 @@ gulp.task('inject', () => {
 		'app/dist/src/**/*route.config.js',
 		'app/dist/src/**/*filter.js',
 		'app/dist/src/**/*directive.js',
+		'app/dist/src/**/*component.js',
 		'app/dist/src/**/*decorator.js',
 		'app/dist/src/**/*interceptor.js',
 		'app/dist/src/**/*service.js',
