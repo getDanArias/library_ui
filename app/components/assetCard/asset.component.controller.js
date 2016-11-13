@@ -1,5 +1,7 @@
 "use strict";
 
-angular.module("app").controller("AssetComponentController", ($scope) => {
-	console.log(`AssetComponentController`);
+angular.module("app").controller("AssetComponentController", () => {
+	
+	console.log("AssetComponentController");
+	
 });

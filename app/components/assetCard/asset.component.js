@@ -1,10 +1,7 @@
 "use strict";
 
 angular.module("app").component("assetCard", {
-	// Isolated scope binding
-	bindings: {
-		asset: '='
-	},
-	templateUrl: '/components/assetCard/asset.component.html',
-	controller: 'AssetComponentController'
+	bindings: {asset: "="},
+	controller: "AssetComponentController",
+	templateUrl: "/components/assetCard/asset.component.html"
 });
