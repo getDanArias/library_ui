@@ -1,4 +1,8 @@
-### Technology Library (UI Layer)
+# Technology Library (UI Layer)
+
+**Technology Library** is an application to manage free technology assets to learn software development online. The assets range from books to videos and are categorized by technology segment, language, paradigm, etc.
+
+The purpose of this layer is to create and present a user interface to interact directly with the Technology Library. This layer uses Angular as its presentational and model management framework. It connects with **Library API** to store, control, update and create assets.
 
 ## Project Set-Up
 
@@ -15,6 +19,8 @@ This command assumes that you are using `yarn` as your Node Package Manager. I r
 If you are using `npm`, execute the following:
 
 `npm install && bower install && gulp`
+
+### Task Builder
 
 Gulp is the task builder of choice. 
 
@@ -38,5 +44,5 @@ There following Gulp tasks are available to execute:
 
 `html-watch` : this watcher runs the injector before refreshing the browser automatically when any change in a .html file is detected.
 
-`default`: default tasks run when executing the `gulp` command. Pipelines `sass`, `lint`, `transpile`, `inject` and `serve`. This should be the command that is executed first when starting the project. Any changes made to the file will be managed by the `gulp` tasks.
+`default` : default tasks run when executing the `gulp` command. Pipelines `sass`, `lint`, `transpile`, `inject` and `serve`. This should be the command that is executed first when starting the project. Any changes made to the file will be managed by the `gulp` tasks.
 
