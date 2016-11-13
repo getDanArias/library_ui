@@ -15,7 +15,7 @@ angular.module("app").controller("EntryController", ($scope, Asset) => {
 
 	$scope.submitAsset = () => {
 		
-		console.log($scope.asset);
+		console.log($scope.asset + Asset);
 		
 	};
 	
