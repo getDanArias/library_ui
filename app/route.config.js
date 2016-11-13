@@ -3,11 +3,10 @@
 /* eslint-disable object-curly-newline */
 
 const libraryRoutersConfig = ($routeProvider) => {
-	
-	$routeProvider.when("/", {
-		templateUrl: "home/home.html"
-	}).
+
+	$routeProvider.
 	when("/home", {
+		controller: "HomeController",
 		templateUrl: "home/home.html"
 	}).
 	when("/signin", {
@@ -24,8 +23,11 @@ const libraryRoutersConfig = ($routeProvider) => {
 	when("/command-center", {
 		controller: "CommandCenterController",
 		templateUrl: "commandCenter/command.center.html"
+	}).
+	otherwise({
+		redirectTo: "/home"
 	});
-	
+
 };
 
 angular.module("app").config(libraryRoutersConfig);

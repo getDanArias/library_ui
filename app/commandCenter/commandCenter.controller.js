@@ -22,9 +22,7 @@ angular.module("app").controller("CommandCenterController", ($scope, Asset) => {
 	$scope.getAssets = () => {
 		
 		$scope.assets = Asset.query(() => {
-			
-			console.log($scope.assets.data);
-			
+			// Promisify
 		});
 		
 	};

@@ -3,21 +3,8 @@
 <h3>Get one asset</h3>
 <input ng-model="assetID">
 <button ng-click="getAsset()">Get Asset</button>
-<div class="well">
-	{{asset.data}}
-</div>
+<asset-card ng-show="asset" asset="asset.data"></asset-card>
 <h3>Get all Assets</h3>
 <button ng-click="getAssets()">Get ALL Assets</button>
-<div class="well" ng-repeat="asset in assets.data">
-	<div>Title: {{asset.title}}</div>
-	<div>
-		Author(s):
-		<span ng-repeat="author in asset.author">{{author}} </span>
-	</div>
-	<div>Source: <a ng-href="{{asset.source}}">{{asset.source}}</a></div>
-	<div>
-		<span ng-repeat="label in asset.category">
-			<span class="label label-primary" >{{label}}</span>
-		</span>
-	</div>
-</div>
+
+<asset-card ng-show="assets" asset="asset" ng-repeat="asset in assets.data"></asset-card>
