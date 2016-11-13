@@ -23,7 +23,6 @@ angular.module("app").controller("EntryController", ($scope, Asset, DBUtil) => {
 		Asset.save($scope.asset.data, () => {
 			// Promise logic
 		});
-
 		
 	};
 	
