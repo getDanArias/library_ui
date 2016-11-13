@@ -11,6 +11,7 @@
 		<script src="lib/jquery/dist/jquery.js"></script>
 		<script src="lib/bootstrap/dist/js/bootstrap.js"></script>
 		<script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+		<script src="lib/angular-resource/angular-resource.js"></script>
 		<!-- endbower -->
 		
 		<!-- bower:css -->
@@ -18,8 +19,8 @@
 		<!-- endbower -->
 		
 		<!-- inject:css -->
-		<link rel="stylesheet" href="dist/styles/main.css">
-		<link rel="stylesheet" href="dist/styles/singin.css">
+		<link rel="stylesheet" href="dist/styles/styles/main.css">
+		<link rel="stylesheet" href="dist/styles/styles/singin.css">
 		<!-- endinject -->
 		
 	</head>
@@ -29,6 +30,7 @@
 				<li><a href="#home">Home</a></li>
 				<li><a href="#signin">Sign in</a></li>
 				<li><a href="#entry">Entry</a></li>
+				<li><a href="#command-center">Command Center</a></li>
 			</ul>
 			
 			<div ng-view></div>
@@ -40,7 +42,9 @@
 		<script src="dist/src/app.js"></script>
 		<script src="dist/src/route.config.js"></script>
 		<script src="dist/src/filters/prettyJson.filter.js"></script>
+		<script src="dist/src/entry/asset.service.js"></script>
 		<script src="dist/src/app.controller.js"></script>
+		<script src="dist/src/commandCenter/commandCenter.controller.js"></script>
 		<script src="dist/src/entry/entry.controller.js"></script>
 		<!-- endinject -->
 		

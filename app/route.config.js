@@ -4,8 +4,7 @@
 
 const libraryRoutersConfig = ($routeProvider) => {
 	
-	$routeProvider.
-	when("/", {
+	$routeProvider.when("/", {
 		templateUrl: "home/home.html"
 	}).
 	when("/home", {
@@ -17,6 +16,10 @@ const libraryRoutersConfig = ($routeProvider) => {
 	when("/entry", {
 		controller: "EntryController",
 		templateUrl: "entry/entry.html"
+	}).
+	when("/command-center", {
+		controller: "CommandCenterController",
+		templateUrl: "commandCenter/command.center.html"
 	});
 	
 };

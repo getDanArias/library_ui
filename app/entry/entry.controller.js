@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("app").controller("EntryController", ($scope) => {
+angular.module("app").controller("EntryController", ($scope, Asset) => {
 	
 	console.log("EntryController");
 	
@@ -9,9 +9,10 @@ angular.module("app").controller("EntryController", ($scope) => {
 		category: "",
 		media: "",
 		source: "",
-		title: ""
+		title: "",
+		type: ""
 	};
-	
+
 	$scope.submitAsset = () => {
 		
 		console.log($scope.asset);
