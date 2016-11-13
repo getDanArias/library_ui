@@ -25,7 +25,7 @@ gulp.task('lint', () => {
 		.pipe(eslint.failAfterError());
 });
 
-// Uncomment concat pipe to unable universal concatenation
+// Uncomment concat pipe to enable universal concatenation
 gulp.task('transpile', () => {
 	return gulp.src(['!app/lib', '!app/lib/**',
 			'!app/dist', '!app/dist/**', 'app/**/*.js'])
