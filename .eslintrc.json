@@ -31,6 +31,8 @@
         "no-console": ["error", { "allow": ["log", "warn", "error"] }],
         "no-tabs": "off",
         "no-trailing-spaces": "off",
-        "quote-props": [2, "as-needed"]
+        "quote-props": [2, "as-needed"],
+        "one-var": ["error", "never"],
+        "max-statements": ["error", 20]
     }
 }
