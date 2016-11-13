@@ -3,8 +3,8 @@
 <h3>Get one asset</h3>
 <input ng-model="assetID">
 <button ng-click="getAsset()">Get Asset</button>
-<asset-card asset="asset.data"></asset-card>
+<asset-card ng-show="asset" asset="asset.data"></asset-card>
 <h3>Get all Assets</h3>
 <button ng-click="getAssets()">Get ALL Assets</button>
 
-<asset-card asset="asset" ng-repeat="asset in assets.data"></asset-card>
+<asset-card ng-show="assets" asset="asset" ng-repeat="asset in assets.data"></asset-card>

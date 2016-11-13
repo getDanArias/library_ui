@@ -27,6 +27,6 @@ angular.module("app").controller("CommandCenterController", ($scope, Asset) => {
 			
 		});
 		
-	};
+	}
 	
 });

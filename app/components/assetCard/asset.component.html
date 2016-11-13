@@ -1,13 +1,62 @@
-<div class="well">
-	<div>Title: {{$ctrl.asset.title}}</div>
-	<div>
-		Author(s):
-		<span ng-repeat="author in $ctrl.asset.author">{{author}} </span>
+<div class="asset-card">
+	<div class="media">
+		<div class="media-left media-middle asset-voting">
+			<!--Voting icons-->
+			<a href="#" class="btn btn-primary btn-circle">
+			<span class="glyphicon glyphicon-chevron-up"></span>
+			</a>
+			<a href="#" class="btn btn-primary btn-circle">
+			<span class="glyphicon glyphicon-chevron-down"></span>
+			</a>
+		</div>
+		<div class="media-body">
+			<!--Asset content-->
+			
+			<div class="media">
+				<div class="media-left media-middle">
+					<img class="media-object img-circle asset-img"  src="/components/assetCard/bulb.png">
+				</div>
+				<div class="media-body media-middle asset-content">
+					
+					<h4 class="media-heading">{{$ctrl.asset.title}}</h4>
+					<div>
+						<span class="author"
+						      ng-repeat="author in $ctrl.asset.author">
+							{{author}}
+						</span>
+					</div>
+					
+					<div class="source">
+						<a ng-href="{{$ctrl.asset.source}}">
+							{{$ctrl.asset.source}}
+						</a>
+					</div>
+					
+					<div class="tags">
+						<span ng-repeat="label in $ctrl.asset.category">
+							<span class="label label-primary" >{{label}}</span>
+						</span>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<div class="media-right media-middle">
+			<!--Util icons-->
+			<a href="#" class="btn btn-primary btn-circle">
+			<span class="glyphicon glyphicon-star"></span>
+			</a>
+			<a href="#" class="btn btn-primary btn-circle">
+			<span class="glyphicon glyphicon-share-alt"></span>
+			</a>
+			<a href="#" class="btn btn-primary btn-circle">
+			<span class="glyphicon glyphicon-pencil"></span>
+			</a>
+		</div>
+			
 	</div>
-	<div>Source: <a ng-href="{{$ctrl.asset.source}}">{{$ctrl.asset.source}}</a></div>
-	<div>
-		<span ng-repeat="label in $ctrl.asset.category">
-			<span class="label label-primary" >{{label}}</span>
-		</span>
-	</div>
+		
 </div>
+		
