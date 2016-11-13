@@ -1,24 +1,21 @@
 "use strict";
 
-
 angular.module("app").controller("EntryController", ($scope) => {
 	
 	console.log("EntryController");
 	
-	$scope.singleModel = 1;
-	
-	$scope.mode = 'Delivery';
-	
 	$scope.asset = {
-		media: "",
-		title: "",
 		author: "",
+		category: "",
+		media: "",
 		source: "",
-		category: ""
+		title: ""
 	};
 	
-	$scope.submit_asset = () => {
+	$scope.submitAsset = () => {
+		
 		console.log($scope.asset);
-	}
+		
+	};
 	
 });
