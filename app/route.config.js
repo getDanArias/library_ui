@@ -6,7 +6,7 @@ const libraryRoutersConfig = ($routeProvider) => {
 	
 	$routeProvider.
 	when("/", {
-		templateUrl: "main.html"
+		templateUrl: "home/home.html"
 	}).
 	when("/home", {
 		templateUrl: "home/home.html"
