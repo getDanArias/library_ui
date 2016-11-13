@@ -1,0 +1,13 @@
+<div class="well">
+	<div>Title: {{$ctrl.asset.title}}</div>
+	<div>
+		Author(s):
+		<span ng-repeat="author in $ctrl.asset.author">{{author}} </span>
+	</div>
+	<div>Source: <a ng-href="{{$ctrl.asset.source}}">{{$ctrl.asset.source}}</a></div>
+	<div>
+		<span ng-repeat="label in $ctrl.asset.category">
+			<span class="label label-primary" >{{label}}</span>
+		</span>
+	</div>
+</div>
