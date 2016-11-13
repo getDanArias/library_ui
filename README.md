@@ -1,1 +1,6 @@
-### library_ui by DecaHub
+### library_ui by DecaHub / AtJeff
+
+## Installation 
+```
+npm start
+```
