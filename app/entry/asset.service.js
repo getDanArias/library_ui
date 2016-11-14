@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("app").factory("Asset", ($resource) => {
+angular.module("app").factory("Asset", function($resource) {
 	
 	return $resource("http://localhost:8000/api/assets/:id", {id: "@id"},
 		{
