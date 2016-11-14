@@ -4,7 +4,7 @@ angular.module("app").controller("EntryController", ($scope, Asset, DBUtil) => {
 	
 	$scope.asset = new Asset();
 	
-	$scope.asset.data = {
+	$scope.asset = {
 		author: "",
 		category: "",
 		media: "",
@@ -15,12 +15,12 @@ angular.module("app").controller("EntryController", ($scope, Asset, DBUtil) => {
 	
 	$scope.submitAsset = () => {
 		
-		$scope.asset.data.author =
-			DBUtil.postgresStringifyListProperty($scope.asset.data.author);
-		$scope.asset.data.category =
-			DBUtil.postgresStringifyListProperty($scope.asset.data.category);
+		$scope.asset.author =
+			DBUtil.postgresStringifyListProperty($scope.asset.author);
+		$scope.asset.category =
+			DBUtil.postgresStringifyListProperty($scope.asset.category);
 
-		Asset.save($scope.asset.data, () => {
+		Asset.save($scope.asset, () => {
 			// Promise logic
 		});
 
