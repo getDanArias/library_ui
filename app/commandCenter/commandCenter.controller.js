@@ -8,6 +8,12 @@ angular.module("app").controller("CommandCenterController", ($scope, Asset) => {
 	$scope.asset = null;
 	$scope.assets = null;
 	
+	$scope.assets = Asset.query(() => {
+		
+		console.log($scope.assets.data);
+		
+	});
+	
 	$scope.getAsset = () => {
 		
 		$scope.asset = Asset.get({id: $scope.assetID}, () => {
