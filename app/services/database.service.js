@@ -14,4 +14,13 @@ angular.module("app").service("AssetDBService", function (Asset) {
 		
 	};
 	
+	this.createAsset = (asset) => {
+		
+		this.asset = new Asset();
+		this.asset = asset;
+		
+		Asset.save(this.asset);
+		
+	};
+	
 });
