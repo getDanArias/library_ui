@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("app").controller("EntryController", ($scope, Asset, DBUtil) => {
+angular.module("app").controller("EntryController", ($scope, Asset) => {
 	
 	$scope.asset = new Asset();
 	
@@ -15,10 +15,10 @@ angular.module("app").controller("EntryController", ($scope, Asset, DBUtil) => {
 	
 	$scope.submitAsset = () => {
 		
-		$scope.asset.author =
-			DBUtil.postgresStringifyListProperty($scope.asset.author);
-		$scope.asset.category =
-			DBUtil.postgresStringifyListProperty($scope.asset.category);
+		// $scope.asset.author =
+		// 	DBUtil.postgresStringifyListProperty($scope.asset.author);
+		// $scope.asset.category =
+		// 	DBUtil.postgresStringifyListProperty($scope.asset.category);
 
 		Asset.save($scope.asset, () => {
 			// Promise logic

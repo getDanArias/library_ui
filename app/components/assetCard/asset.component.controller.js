@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("app").controller("AssetComponentController", function($scope, DBUtil, Asset) {
+angular.module("app").controller("AssetComponentController", function($scope, Asset) {
 	
 	console.log("AssetComponentController");
 	
@@ -22,11 +22,6 @@ angular.module("app").controller("AssetComponentController", function($scope, DB
 			
 			console.log(asset);
 			console.log(asset.data);
-			
-			localAsset.author =
-				DBUtil.postgresStringifyListProperty(localAsset.author);
-			localAsset.category =
-				DBUtil.postgresStringifyListProperty(localAsset.category);
 			
 			Asset.update({id: asset.data.id}, localAsset);
 			

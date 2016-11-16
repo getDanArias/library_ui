@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("app").controller("CommandCenterController", ($scope, Asset) => {
+angular.module("app").controller("CommandCenterController", ($scope, AssetDBService) => {
 	
 	console.log("CommandCenterController");
 	
@@ -8,31 +8,10 @@ angular.module("app").controller("CommandCenterController", ($scope, Asset) => {
 	$scope.asset = null;
 	$scope.assets = null;
 	
-	$scope.assets = Asset.query(() => {
-		
-		console.log($scope.assets.data);
-		
-	});
+	$scope.assets = AssetDBService.getAssets();
 	
 	$scope.getAsset = () => {
-		
-		$scope.asset = Asset.get({id: $scope.assetID}, () => {
-			
-			console.log($scope.asset);
-			console.log($scope.asset.data);
-			
-		});
-		
-	};
-	
-	$scope.getAssets = () => {
-		
-		$scope.assets = Asset.query(() => {
-			
-			console.log($scope.assets.data);
-			
-		});
-		
-	};
+		$scope.asset = AssetDBService.getAsset($scope.assetID);
+	}
 	
 });
