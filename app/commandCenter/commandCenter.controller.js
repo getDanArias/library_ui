@@ -1,36 +1,22 @@
 "use strict";
 
-angular.module("app").controller("CommandCenterController", ($scope, Asset) => {
+angular.module("app").controller("CommandCenterController",
+	($scope, AssetDBService) => {
 	
-	console.log("CommandCenterController");
-	
-	$scope.assetID = null;
-	$scope.asset = null;
-	$scope.assets = null;
-	
-	$scope.assets = Asset.query(() => {
+		console.log("CommandCenterController");
 		
-		console.log($scope.assets.data);
+		$scope.assetID = null;
+		$scope.asset = null;
+		$scope.assets = null;
 		
+		console.log($scope.asset);
+		
+		$scope.assets = AssetDBService.getAssets();
+		
+		$scope.getAsset = () => {
+			
+			$scope.asset = AssetDBService.getAsset($scope.assetID);
+			
+		};
+	
 	});
-	
-	$scope.getAsset = () => {
-		
-		$scope.asset = Asset.get({id: $scope.assetID}, () => {
-			
-			console.log($scope.asset);
-			console.log($scope.asset.data);
-			
-		});
-		
-	};
-	
-	$scope.getAssets = () => {
-		
-		$scope.assets = Asset.query(() => {
-			// Promisify
-		});
-		
-	};
-	
-});

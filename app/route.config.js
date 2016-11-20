@@ -3,28 +3,29 @@
 /* eslint-disable object-curly-newline */
 
 const libraryRoutersConfig = ($routeProvider) => {
-
-	$routeProvider.
-	when("/home", {
-		controller: "HomeController",
+	
+	$routeProvider.when("/", {
 		templateUrl: "home/home.html"
-	}).
-	when("/signin", {
+	})
+	.when("/home", {
+		templateUrl: "home/home.html"
+	})
+	.when("/signin", {
 		templateUrl: "signin/signin.html"
-	}).
-	when("/entry", {
+	})
+	.when("/entry", {
 		controller: "EntryController",
 		templateUrl: "entry/entry.html"
-	}).
-	when("/update", {
+	})
+	.when("/update", {
 		controller: "UpdateController",
 		templateUrl: "entry/update.entry.html"
-	}).
-	when("/command-center", {
+	})
+	.when("/command-center", {
 		controller: "CommandCenterController",
 		templateUrl: "commandCenter/command.center.html"
-	}).
-	otherwise({
+	})
+	.otherwise({
 		redirectTo: "/home"
 	});
 

@@ -1,37 +1,24 @@
 "use strict";
 
-angular.module("app").controller("AssetComponentController", function($scope, DBUtil, Asset) {
-	
-	console.log("AssetComponentController");
-	
-	let localAsset = this.asset;
-	
-	$scope.editing = false;
-	
-	$scope.hello = () => {
-		console.log("Hello, I am:");
-		console.log(this.asset);
-		// $scope.editing = true;
-	};
-	
-	$scope.updatedAsset = {};
-	
-	$scope.changeAsset = () => {
+/* eslint-disable no-invalid-this, consistent-this, object-shorthand,
+ no-ternary, func-names, sort-keys, no-prototype-builtins */
+
+angular.module("app").controller("AssetComponentController",
+	function (AssetDBService) {
 		
-		let asset = Asset.get({id: localAsset.id}, () => {
-			
-			console.log(asset);
-			console.log(asset.data);
-			
-			localAsset.author =
-				DBUtil.postgresStringifyListProperty(localAsset.author);
-			localAsset.category =
-				DBUtil.postgresStringifyListProperty(localAsset.category);
-			
-			Asset.update({id: asset.data.id}, localAsset);
-			
-		});
+		console.log("AssetComponentController");
 		
-	};
-	
-});
+		
+		this.changeAsset = () => {
+			
+			console.log(this.assetCopy);
+			
+			AssetDBService.changeAsset(this.assetCopy.id, this.assetCopy);
+			
+			console.log("Changed asset");
+			
+			// this.parent.refreshAssets();
+			
+		};
+		
+	});

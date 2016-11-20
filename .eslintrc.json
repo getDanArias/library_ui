@@ -33,6 +33,7 @@
         "no-trailing-spaces": "off",
         "quote-props": [2, "as-needed"],
         "one-var": ["error", "never"],
-        "max-statements": ["error", 20]
+        "max-statements": ["error", 20],
+        "dot-location": ["error", "property"]
     }
 }
