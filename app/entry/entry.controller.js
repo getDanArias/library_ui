@@ -1,21 +1,21 @@
 "use strict";
 
-angular.module("app").controller("EntryController", ($scope, AssetDBService) => {
+angular.module("app").controller("EntryController",
+	($scope, AssetDBService) => {
 	
-	
-	$scope.asset = {
-		author: "",
-		category: "",
-		media: "",
-		source: "",
-		title: "",
-		type: ""
-	};
-	
-	$scope.submitAsset = () => {
+		$scope.asset = {
+			author: "",
+			category: "",
+			media: "",
+			source: "",
+			title: "",
+			type: ""
+		};
 		
-		AssetDBService.createAsset($scope.asset);
+		$scope.submitAsset = () => {
+			
+			AssetDBService.createAsset($scope.asset);
+			
+		};
 		
-	};
-	
-});
+	});

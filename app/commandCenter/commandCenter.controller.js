@@ -1,17 +1,22 @@
 "use strict";
 
-angular.module("app").controller("CommandCenterController", ($scope, AssetDBService) => {
+angular.module("app").controller("CommandCenterController",
+	($scope, AssetDBService) => {
 	
-	console.log("CommandCenterController");
+		console.log("CommandCenterController");
+		
+		$scope.assetID = null;
+		$scope.asset = null;
+		$scope.assets = null;
+		
+		console.log($scope.asset);
+		
+		$scope.assets = AssetDBService.getAssets();
+		
+		$scope.getAsset = () => {
+			
+			$scope.asset = AssetDBService.getAsset($scope.assetID);
+			
+		};
 	
-	$scope.assetID = null;
-	$scope.asset = null;
-	$scope.assets = null;
-	
-	$scope.assets = AssetDBService.getAssets();
-	
-	$scope.getAsset = () => {
-		$scope.asset = AssetDBService.getAsset($scope.assetID);
-	}
-	
-});
+	});
