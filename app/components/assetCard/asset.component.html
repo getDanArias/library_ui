@@ -3,10 +3,10 @@
 		<div class="media-left media-middle asset-voting">
 			<!--Voting icons-->
 			<a href="#" class="btn btn-primary btn-circle">
-			<span class="glyphicon glyphicon-chevron-up"></span>
+				<span class="glyphicon glyphicon-chevron-up"></span>
 			</a>
 			<a href="#" class="btn btn-primary btn-circle">
-			<span class="glyphicon glyphicon-chevron-down"></span>
+				<span class="glyphicon glyphicon-chevron-down"></span>
 			</a>
 		</div>
 		<div class="media-body">
@@ -38,95 +38,25 @@
 						</span>
 					</div>
 				</div>
-				
-			</div>
 			
+			</div>
+		
 		</div>
 		
 		<div class="media-right media-middle">
 			<!--Util icons-->
 			<a href="#" class="btn btn-primary btn-circle">
-			<span class="glyphicon glyphicon-star"></span>
+				<span class="glyphicon glyphicon-star"></span>
 			</a>
 			<a href="#" class="btn btn-primary btn-circle">
-			<span class="glyphicon glyphicon-share-alt"></span>
+				<span class="glyphicon glyphicon-share-alt"></span>
 			</a>
-			<a class="btn btn-primary btn-circle"
-			   data-toggle="modal" data-target="{{'#modal' + $ctrl.asset.id}}">
+			<a class="btn btn-primary btn-circle" ng-click="$ctrl.open($ctrl.asset)">
 				<span class="glyphicon glyphicon-pencil"></span>
 			</a>
 		</div>
-			
-	</div>
-		
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="{{'modal' + $ctrl.asset.id}}" role="dialog">
-	<div class="modal-dialog">
-		
-		<!-- Modal content-->
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title">Editing</h4>
-			</div>
-			<div class="modal-body">
-				
-				<form>
-					<div class="form-group">
-						<div class="row">
-							<div class="btn-group col-xs-12">
-								<label ng-model="$ctrl.asset.media" uib-btn-radio="'video'"
-								       class="btn btn-default col-xs-6">Video</label>
-								<label ng-model="$ctrl.asset.media" uib-btn-radio="'book'"
-								       class="btn btn-default col-xs-6">Book</label>
-							</div>
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="row">
-							<div class="btn-group col-xs-12">
-								<label class="btn btn-default col-xs-6"
-								       ng-model="$ctrl.asset.type"
-								       uib-btn-radio="'tutorial'">Tutorial</label>
-								<label class="btn btn-default col-xs-6"
-								       ng-model="$ctrl.asset.type"
-								       uib-btn-radio="'talk'">Talk</label>
-								<label class="btn btn-default col-xs-6"
-								       ng-model="$ctrl.asset.type"
-								       uib-btn-radio="'tonference'">Conference</label>
-								<label class="btn btn-default col-xs-6"
-								       ng-model="$ctrl.asset.type"
-								       uib-btn-radio="'pairprogramming'">Pair Programming</label>
-							</div>
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="title">Title</label>
-						<input id="title" ng-model="$ctrl.asset.title"
-						       type="text" class="form-control">
-						
-						<label for="author">Author</label>
-						<input id="author" ng-model="$ctrl.asset.author"
-						       type="text" class="form-control">
-						
-						<label for="source">Source</label>
-						<input id="source" ng-model="$ctrl.asset.source"
-						       type="text" class="form-control">
-						
-						<label for="category">Category</label>
-						<input id="category" ng-model="$ctrl.asset.category"
-						       type="text" class="form-control">
-					</div>
-			
-			</div>
-			<div class="modal-footer">
-				<button ng-click="changeAsset()" type="button" class="btn btn-default">Update</button>
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			</div>
-		</div>
 	
 	</div>
+
 </div>
-		
+			
