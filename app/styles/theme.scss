@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Arvo');
+@import url('https://fonts.googleapis.com/css?family=Alef:400,700');
+@import url('https://fonts.googleapis.com/css?family=Oxygen:400,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700');
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+.categoryParent {
+	display: table;
+	padding: 0;
+	margin: 10px;
+}
+
+.category {
+	display: table-cell;
+	background: palevioletred;
+	height: 100px;
+	
+	text-align: center;
+	vertical-align: middle;
+	
+	border-radius: 5px;
+}
