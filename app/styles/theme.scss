@@ -9,19 +9,50 @@ body {
 	font-family: 'Poppins', sans-serif;
 }
 
+.banner {
+	background: darkseagreen;
+}
+
+.categoryBoard {
+	//padding: 20px;
+	background: cadetblue;
+}
+
 .categoryParent {
 	display: table;
-	padding: 0;
-	margin: 10px;
+	//padding: 0;
+	//margin: 10px;
 }
 
 .category {
-	display: table-cell;
-	background: palevioletred;
+	display: table;
+	
+	box-sizing: border-box;
+	
+	padding: 7px;
+	
+	//margin: 10px;
+	
+	
+	//background: palevioletred;
 	height: 100px;
 	
-	text-align: center;
-	vertical-align: middle;
+	font-size: 15px;
 	
-	border-radius: 5px;
+	
+	
+	> div {
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+		
+		box-sizing: border-box;
+		
+		color: white;
+		
+		padding: 5px;
+		
+		//background: coral;
+		border-radius: 5px;
+	}
 }

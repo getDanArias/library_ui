@@ -84,7 +84,8 @@ gulp.task('inject', () => {
 	pipe(gulp.dest('app'));
 });
 
-gulp.task('js-watch', ['lint', 'transpile', 'inject'], () => {
+// gulp.task('js-watch', ['lint', 'transpile', 'inject'], () => {
+gulp.task('js-watch', ['transpile', 'inject'], () => {
 	browserSync.reload();
 });
 
@@ -106,4 +107,5 @@ gulp.task('serve', () => {
 	
 });
 
-gulp.task('default', ['sass', 'lint', 'transpile', 'inject', 'serve']);
+gulp.task('default', ['sass', 'transpile', 'inject', 'serve']);
+// gulp.task('default', ['sass', 'lint', 'transpile', 'inject', 'serve']);

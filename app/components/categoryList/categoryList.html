@@ -1,9 +1,2 @@
-<div class="container">
-	<span>Categories</span>
-</div>
+<category-card class="category col-sm-2" ng-repeat="category in $ctrl.categories.data | orderBy: 'category'" name="category.category"></category-card>
 
-<div class="categoryParent media col-sm-2" ng-repeat="category in $ctrl.categories.data">
-	<div class="category" >
-		{{category.category}}
-	</div>
-</div>
